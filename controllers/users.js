@@ -94,6 +94,10 @@ const updateUser = (req, res, next) => {
       }
     })
     .catch((error) => {
+      if (error.name === 11000) {
+        next(new Conflict('Пользователь с такими данными уже существует'));
+        return;
+      }
       if (error.name === 'ValidationError') {
         next(new BadRequest(`Переданы некорректные данные пользователя ${error}`));
         return;
