@@ -11,8 +11,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const auth = require('./middlewares/auth');
 const errorHandler = require('./middlewares/centralErrorHandler');
 
-const { PORT } = process.env;
-const { DB_ADDRESS } = process.env;
+const { PORT, DB_ADDRESS } = process.env;
 
 mongoose.connect(DB_ADDRESS, {
   useNewUrlParser: true,
