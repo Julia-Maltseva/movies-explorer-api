@@ -58,7 +58,7 @@ const deleteMovie = (req, res, next) => {
     .then((movie) => {
       if (movie === null) {
         next(new NotFound('Запрашиваемый фильм не найден'));
-      } if (req.user._id !== movie.owner._id.toHexString()) {
+      } if (req.user._id !== movie.owner.toHexString()) {
         next(new Forbidden('Невозможно удалить фильм другого пользователя'));
       } else {
         res.status(ErrorCode.STATUS_OK).send({ message: 'Фильм удален' });
