@@ -1,6 +1,6 @@
 # movies-explorer-api
 
-<h2>IP 51.250.104.13</h2>
+<h3>IP 51.250.104.13</h3>
 
-<h2>Backend: api.moviesappjm.nomoreparties.sbs</h2>
-<h2>Frontend: ... </h2>
+<h4>Backend: api.moviesappjm.nomoreparties.sbs</h4>
+<h4>Frontend: ... </h4>
