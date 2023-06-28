@@ -9,7 +9,7 @@ const cors = require('cors');
 const { errors } = require('celebrate');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const auth = require('./middlewares/auth');
-const errorHandler = require('./middlewares/centralErrorHandler');
+const errorHandler = require('./middlewares/errorHandler');
 const { PORT, DB_ADDRESS } = require('./utils/config');
 
 mongoose.connect(DB_ADDRESS, {
