@@ -1,4 +1,4 @@
-const { ErrorCode } = require('../error');
+const ErrorCode = require('../error');
 
 const errorHandler = (err, req, res, next) => {
   const { statusCode = ErrorCode.SERVER_ERROR, message } = err;
