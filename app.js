@@ -8,7 +8,6 @@ const path = require('path');
 const cors = require('cors');
 const { errors } = require('celebrate');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const auth = require('./middlewares/auth');
 const errorHandler = require('./middlewares/errorHandler');
 const { PORT, DB_ADDRESS } = require('./utils/config');
 
@@ -34,8 +33,6 @@ app.get('/crash-test', () => {
     throw new Error('Сервер сейчас упадёт');
   }, 0);
 });
-
-app.use(auth);
 
 app.use('/', require('./routes/index'));
 
